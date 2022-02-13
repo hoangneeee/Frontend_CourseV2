@@ -6,7 +6,9 @@ function Header() {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Course V2</Navbar.Brand>
+                <Link className="nav-link" to="/">
+                    <Navbar.Brand href="/">Course V2</Navbar.Brand>
+                </Link>
                 <Nav className="me-auto">
                     <Link className="nav-link" to="/">Home</Link>
                     <Link className="nav-link" to="/">Register</Link>
