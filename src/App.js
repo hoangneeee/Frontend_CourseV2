@@ -7,7 +7,7 @@ import Body from "./Components/Body";
 
 const App = () => {
     return (
-        <Container>
+        <Container style={{backgroundColor: "#f5f5f5"}}>
             <Body/>
         </Container>
     );

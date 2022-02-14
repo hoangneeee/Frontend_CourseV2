@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Row} from "react-bootstrap";
+import {Row, Spinner} from "react-bootstrap";
 import userApi from "../Api/User/userApi";
 import {useParams} from "react-router-dom";
 import LessonCard from "../Components/CustomTag/LessonCard";
@@ -24,6 +24,14 @@ function Lesson() {
 
         fetchCourseId();
     }, [courseId]);
+
+    if (lessons === null) {
+        return (
+            <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
+        )
+    }
 
     return (
         <>

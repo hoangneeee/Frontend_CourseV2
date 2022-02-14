@@ -1,4 +1,4 @@
-import {Container, Nav, Navbar} from "react-bootstrap";
+import {Button, Container, Form, FormControl, Nav, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 
@@ -14,6 +14,15 @@ function Header() {
                     <Link className="nav-link" to="/">Register</Link>
                     <Link className="nav-link" to="/">Login</Link>
                 </Nav>
+                <Form className="d-flex">
+                    <FormControl
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                    />
+                    <Button variant="outline-success">Search</Button>
+                </Form>
             </Container>
         </Navbar>
     )
