@@ -1,33 +1,35 @@
 import {useEffect, useState} from "react";
 import userApi from "../Api/User/userApi";
-import {Row} from "react-bootstrap";
-import CourseCard from "../Components/CustomTag/CourseCard";
+import mqttApi from "../Api/Mqtt/mqttApi";
+import {ListGroup, Row} from "react-bootstrap";
+import MessageList from "../Components/MessageList";
 
 
 function Home() {
-    const [courseList, setCourseList] = useState([])
+    const [messageList, setMessageList] = useState([])
 
     useEffect(() => {
-        const fetchCourseList = async () => {
+        const fetchMessageList = async () => {
             try {
-                const data = {id: 0};
-                const res = await userApi.getCourse(data);
+                const res = await mqttApi.getMessage();
                 console.log('Success', res.data);
 
-                setCourseList(res.data.data.courses)
+                setMessageList(res.data);
             } catch (error) {
                 console.error(error);
             }
         }
 
-        fetchCourseList();
+        fetchMessageList();
     }, []);
 
     return (
         <>
-            <h1 className="text-center text-danger">Courses List</h1>
+            <h1 className="text-center text-danger">Device Message</h1>
             <Row>
-                {courseList.map(course => <CourseCard course={course}/>)}
+                <ListGroup>
+                    {messageList.map((data) => <MessageList message={data.message} mac={data.mac}/>)}
+                </ListGroup>
             </Row>
         </>
     );

@@ -7,7 +7,7 @@ function Header() {
         <Navbar bg="dark" variant="dark">
             <Container>
                 <Link className="nav-link" to="/">
-                    <Navbar.Brand href="/">Course V2</Navbar.Brand>
+                    <Navbar.Brand href="/">Demo MQTT</Navbar.Brand>
                 </Link>
                 <Nav className="me-auto">
                     <Link className="nav-link" to="/">Home</Link>
