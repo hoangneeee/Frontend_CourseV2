@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "../Pages/Home";
 import Lesson from "../Pages/Lesson";
+import Action from "../Pages/Action";
 
 
 function Body() {
@@ -11,6 +12,7 @@ function Body() {
             <Header/>
             <Routes>
                 <Route exact path="/" element={<Home/>}/>
+                <Route exact path="/action" element={<Action/>}/>
                 <Route exact path="/course/:courseId/" element={<Lesson/>}/>
             </Routes>
             <Footer/>

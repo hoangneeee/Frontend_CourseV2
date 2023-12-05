@@ -1,6 +1,6 @@
 import axiosClient from "../rootApi";
 
-const PATH_URL = '/mqtt';
+const PATH_URL = 'mqtt';
 
 class MqttApi {
     async getMessage() {
