@@ -1,7 +1,7 @@
-import React from 'react'
+import { createRef } from 'react';
 
 const MessageInput = ({ handleTypingMessage, handleSubmitMessage }) => {
-    const textInput = React.createRef()
+    const textInput = createRef()
 
     const handleSubmit = () => {
         textInput.current.value = ''

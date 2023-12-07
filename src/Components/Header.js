@@ -12,7 +12,7 @@ function Header() {
                 <Nav className="me-auto">
                     <Link className="nav-link" to="/">Home</Link>
                     <Link className="nav-link" to="/action">Action</Link>
-                    <Link className="nav-link" to="/">Register</Link>
+                    <Link className="nav-link" to="/schedule">Schedule</Link>
                     <Link className="nav-link" to="/">Login</Link>
                 </Nav>
                 <Form className="d-flex">

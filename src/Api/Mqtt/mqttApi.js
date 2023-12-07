@@ -12,6 +12,11 @@ class MqttApi {
         const url = PATH_URL + '/send-message';
         return axiosClient.post(url, data)
     };
+
+    async sendDataSchedule(data) {
+        const url = PATH_URL + '/on-off-schedule';
+        return axiosClient.post(url, data)
+    };
 }
 
 const mqttApi = new MqttApi();
